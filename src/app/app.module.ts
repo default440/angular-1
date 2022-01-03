@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 
+import { StateDialogComponent, StatesPageComponent } from './state';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -16,6 +18,8 @@ import { ProductListComponent } from './product-list/product-list.component';
     ])
   ],
   declarations: [
+    StateDialogComponent,
+    StatesPageComponent,
     AppComponent,
     TopBarComponent,
     ProductListComponent
@@ -24,11 +28,5 @@ import { ProductListComponent } from './product-list/product-list.component';
     AppComponent
   ]
 })
+
 export class AppModule { }
-
-
-/*
-Copyright Google LLC. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at https://angular.io/license
-*/
