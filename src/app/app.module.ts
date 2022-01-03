@@ -1,28 +1,38 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { ProductListComponent } from './product-list/product-list.component';
-
-import { StateDialogComponent, StatesPageComponent } from './state';
+import { 
+  StateDialogComponent,
+  StatesPageComponent,
+  UserLoginDialogComponent,
+  UserPageComponent,
+  UserRegistrationDialogComponent, 
+  UsersPageComponent
+} from './components';
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    FormsModule,
     RouterModule.forRoot([
-      { path: '', component: ProductListComponent },
+      { path: '', component: UserPageComponent },
+      { path: 'Users', component: UsersPageComponent }
     ])
   ],
   declarations: [
     StateDialogComponent,
     StatesPageComponent,
+    UsersPageComponent,
+    UserPageComponent,
+    UserRegistrationDialogComponent,
+    UserLoginDialogComponent,
     AppComponent,
     TopBarComponent,
-    ProductListComponent
   ],
   bootstrap: [
     AppComponent
