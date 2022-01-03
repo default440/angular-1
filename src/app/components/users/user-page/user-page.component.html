@@ -4,3 +4,11 @@
     <p>Money: </p>
     <p>Factories: </p>
 </div>
+<div *ngIf="!userId">
+    <button *ngIf="!showRegistrationForm" (click)="showRegistrationForm = true">Regisrtation</button>
+    <button *ngIf="!showLoginForm" (click)="showLoginForm = true">Login</button>
+
+    <div *ngIf="showRegistrationForm">
+        <user-registration-dialog></user-registration-dialog>
+    </div>
+</div>

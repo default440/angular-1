@@ -6,21 +6,32 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-page.component.css']
 })
 
-export class UserPageComponent implements OnInit {
+export class UserPageComponent implements OnInit  {
   userId: string | null = window.localStorage.getItem("userId");
 
-  ngOnInit(): void {
-    let count = window.localStorage.getItem('count');
-    if (count) {
-      this.count = +count;
-    }
+  private _showLoginForm: boolean = false;
+  private _showRegistrationForm: boolean = false;
+
+  set showLoginForm(show: boolean) {
+    this._showLoginForm = show;
+    this._showRegistrationForm = false;
   }
 
-  public count: number = 0;
+  get showLoginForm(): boolean {
+    return this._showLoginForm;
+  }
 
-  public inc() {
-    this.count++;
-    window.localStorage.setItem('count', this.count.toString());
+  set showRegistrationForm(show: boolean) {
+    this._showLoginForm = false;
+    this._showRegistrationForm = show;
+  }
+
+  get showRegistrationForm(): boolean {
+    return this._showRegistrationForm;
+  }
+  
+  ngOnInit(): void {
+
   }
 
   share() {
