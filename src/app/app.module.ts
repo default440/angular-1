@@ -6,8 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
-
-import { StateDialogComponent, StatesPageComponent } from './state';
+import { StateDialogComponent, StatesPageComponent, UserPageComponent, UsersPageComponent } from './components';
 
 @NgModule({
   imports: [
@@ -15,11 +14,14 @@ import { StateDialogComponent, StatesPageComponent } from './state';
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
+      { path: 'Users', component: UsersPageComponent }
     ])
   ],
   declarations: [
     StateDialogComponent,
     StatesPageComponent,
+    UsersPageComponent,
+    UserPageComponent,
     AppComponent,
     TopBarComponent,
     ProductListComponent
