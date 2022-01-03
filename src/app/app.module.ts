@@ -5,7 +5,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
-import { StateDialogComponent, StatesPageComponent, UserPageComponent, UserRegistrationDialogComponent, UsersPageComponent } from './components';
+import { 
+  StateDialogComponent,
+  StatesPageComponent,
+  UserLoginDialogComponent,
+  UserPageComponent,
+  UserRegistrationDialogComponent, 
+  UsersPageComponent
+} from './components';
 
 @NgModule({
   imports: [
@@ -23,6 +30,7 @@ import { StateDialogComponent, StatesPageComponent, UserPageComponent, UserRegis
     UsersPageComponent,
     UserPageComponent,
     UserRegistrationDialogComponent,
+    UserLoginDialogComponent,
     AppComponent,
     TopBarComponent,
   ],
